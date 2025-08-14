@@ -1,0 +1,15 @@
+.home-hero {
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.home-hero {
+  padding: 2rem;
+  border-left: 6px solid #111;
+}
+.home-hero h1 {
+  letter-spacing: 0.2px;
+}
+.home-hero .cta {
+  margin-top: 1rem;
+}

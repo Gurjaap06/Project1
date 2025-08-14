@@ -1,0 +1,11 @@
+.news-wrap {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+}
+
+.news-wrap {
+  padding: 1rem;
+}
+.news-wrap .section-title {
+  color: #000;
+}

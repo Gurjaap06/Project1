@@ -1,0 +1,11 @@
+.shop-wrap {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+}
+
+.shop-wrap {
+  padding: 1rem;
+}
+.shop-wrap .section-title {
+  color: #000;
+}

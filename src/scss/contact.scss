@@ -1,0 +1,11 @@
+﻿// contact.scss — show at least one of each feature
+$accent: #000; // lofi vibe
+%card {
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: .75rem;
+}
+.contact-wrap {
+  @extend %card;
+  padding: 1rem;
+  .section-title { color: $accent; }
+}

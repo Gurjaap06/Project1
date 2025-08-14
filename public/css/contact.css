@@ -1,0 +1,11 @@
+.contact-wrap {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+}
+
+.contact-wrap {
+  padding: 1rem;
+}
+.contact-wrap .section-title {
+  color: #000;
+}

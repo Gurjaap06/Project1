@@ -1,0 +1,11 @@
+.gallery-wrap {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+}
+
+.gallery-wrap {
+  padding: 1rem;
+}
+.gallery-wrap .section-title {
+  color: #000;
+}

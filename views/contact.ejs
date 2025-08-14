@@ -1,0 +1,12 @@
+﻿<% var body = \
+<section class="prose">
+  <h1 class="page-title"><%= title %></h1>
+  <p>This is the contact page. Replace with real content/data.</p>
+  <div class="grid md:grid-cols-3 gap-4 mt-6">
+    <div class="card bg-base-100 shadow"><div class="card-body"><h2 class="card-title">Card A</h2><p>Use daisyUI components.</p></div></div>
+    <div class="card bg-base-100 shadow"><div class="card-body"><h2 class="card-title">Card B</h2><p>EJS variables: <%= page %></p></div></div>
+    <div class="card bg-base-100 shadow"><div class="card-body"><h2 class="card-title">Card C</h2><p>Style extras via SCSS.</p></div></div>
+  </div>
+</section>
+\ %>
+<%- include('./_layout', { body }) %>
