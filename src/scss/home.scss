@@ -1,0 +1,20 @@
+$brand: #111;
+$gap: 1rem;
+
+@mixin inset-card($pad) {
+  padding: $pad;
+  border-left: 6px solid $brand;
+}
+
+%soft {
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+.home-hero {
+  @extend %soft;
+  @include inset-card($gap * 2);
+
+  h1 { letter-spacing: .2px; }
+  .cta { margin-top: $gap; }
+}

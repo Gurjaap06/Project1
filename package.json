@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:tw": "npx tailwindcss -i ./src/styles/app.css -o ./public/css/tailwind.css --watch",
+    "dev:sass": "sass --no-source-map --watch src/scss:public/css",
+    "dev:server": "nodemon server.js",
+    "dev": "concurrently \"npm:dev:tw\" \"npm:dev:sass\" \"npm:dev:server\"",
+    "build:tw": "npx tailwindcss -i ./src/styles/app.css -o ./public/css/tailwind.css --minify",
+    "build:sass": "sass --no-source-map src/scss:public/css",
+    "build": "npm run build:tw && npm run build:sass"
   },
   "keywords": [],
   "author": "",
