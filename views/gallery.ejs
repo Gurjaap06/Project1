@@ -3,40 +3,14 @@
   <%- include('partials/head') %>
   <body class="min-h-screen flex flex-col bg-base-100">
     <%- include('partials/nav') %>
-
     <main class="container mx-auto p-6 flex-1">
-      <section class="prose">
-        <h1 class="page-title"><%= title %></h1>
-        <p>This is the <%= page %> page. Replace with real content/data.</p>
-
-        <div class="grid md:grid-cols-3 gap-4 mt-6">
-          <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h2 class="card-title">Card A</h2>
-              <p>Use daisyUI components.</p>
-            </div>
-          </div>
-          <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h2 class="card-title">Card B</h2>
-              <p>EJS variable: <%= page %></p>
-            </div>
-          </div>
-          <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h2 class="card-title">Card C</h2>
-              <p>SCSS per-page demo.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <img
-        src="/images/marcus-wallis-mUtQXjjLPbw-unsplash.jpg"
-        alt="test"
-        class="max-w-sm rounded-lg shadow"
-      />
+      <h1 class="page-title"><%= title %></h1>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+        <% (Array.isArray(gallery) ? gallery : []).forEach(src => { %>
+        <img src="/images/alfred-kenneally-XqFeVprJ3jQ-unsplash.jpg" alt="club photo" class="rounded-lg shadow" />
+        <% }) %>
+      </div>
     </main>
-
     <%- include('partials/footer') %>
     <script src="/js/main.js"></script>
   </body>

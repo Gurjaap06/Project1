@@ -1,37 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <%- include('partials/head') %>
   <body class="min-h-screen flex flex-col bg-base-100">
     <%- include('partials/nav') %>
-
     <main class="container mx-auto p-6 flex-1">
-      <section class="prose">
-        <h1 class="page-title"><%= title %></h1>
-        <p>This is the <%= page %> page. Replace with real content/data.</p>
-
-        <div class="grid md:grid-cols-3 gap-4 mt-6">
-          <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h2 class="card-title">Card A</h2>
-              <p>Use daisyUI components.</p>
-            </div>
-          </div>
-          <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h2 class="card-title">Card B</h2>
-              <p>EJS variable: <%= page %></p>
-            </div>
-          </div>
-          <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h2 class="card-title">Card C</h2>
-              <p>SCSS per-page demo.</p>
-            </div>
-          </div>
+      <h1 class="page-title"><%= title %></h1>
+      <% const _players = Array.isArray(players) ? players : []; const totals =
+      _players.reduce((a,p)=>({ matches: a.matches + (p.matches||0), runs:
+      a.runs + (p.runs||0), wkts: a.wkts + (p.wkts||0) }),
+      {matches:0,runs:0,wkts:0}); %>
+      <div class="stats shadow mt-4">
+        <div class="stat">
+          <div class="stat-title">Total Matches</div>
+          <div class="stat-value"><%= totals.matches %></div>
         </div>
-      </section>
+        <div class="stat">
+          <div class="stat-title">Total Runs</div>
+          <div class="stat-value"><%= totals.runs %></div>
+        </div>
+        <div class="stat">
+          <div class="stat-title">Total Wickets</div>
+          <div class="stat-value"><%= totals.wkts %></div>
+        </div>
+      </div>
     </main>
-
     <%- include('partials/footer') %>
     <script src="/js/main.js"></script>
   </body>

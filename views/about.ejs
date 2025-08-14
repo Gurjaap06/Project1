@@ -1,37 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <%- include('partials/head') %>
   <body class="min-h-screen flex flex-col bg-base-100">
     <%- include('partials/nav') %>
-
     <main class="container mx-auto p-6 flex-1">
       <section class="prose">
         <h1 class="page-title"><%= title %></h1>
-        <p>This is the <%= page %> page. Replace with real content/data.</p>
-
-        <div class="grid md:grid-cols-3 gap-4 mt-6">
-          <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h2 class="card-title">Card A</h2>
-              <p>Use daisyUI components.</p>
+        <p>
+          Founded in 2021, we’re a community club focused on player development
+          and competitive play.
+        </p>
+        <ul
+          class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical mt-6"
+        >
+          <li>
+            <div class="timeline-middle"></div>
+            <div class="timeline-start md:text-end mb-10">
+              <time class="font-mono italic">2021</time>
+              <div class="text-lg font-black">Club formed</div>
+              <p>First friendly fixtures</p>
             </div>
-          </div>
-          <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h2 class="card-title">Card B</h2>
-              <p>EJS variable: <%= page %></p>
+          </li>
+          <li>
+            <div class="timeline-middle"></div>
+            <div class="timeline-end mb-10">
+              <time class="font-mono italic">2023</time>
+              <div class="text-lg font-black">League debut</div>
+              <p>Finished 2nd in division</p>
             </div>
-          </div>
-          <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h2 class="card-title">Card C</h2>
-              <p>SCSS per-page demo.</p>
+          </li>
+          <li>
+            <div class="timeline-middle"></div>
+            <div class="timeline-start md:text-end mb-10">
+              <time class="font-mono italic">2025</time>
+              <div class="text-lg font-black">Expanded squads</div>
+              <p>U19 development pathway launched</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
     </main>
-
     <%- include('partials/footer') %>
     <script src="/js/main.js"></script>
   </body>
