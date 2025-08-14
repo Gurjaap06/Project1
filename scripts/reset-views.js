@@ -1,4 +1,22 @@
-<!DOCTYPE html>
+// scripts/reset-views.js
+const fs = require("fs");
+const path = require("path");
+
+// If you want to also rewrite "home", add it here too.
+const pages = [
+  "home",
+  "about",
+  "team",
+  "fixtures",
+  "news",
+  "gallery",
+  "stats",
+  "shop",
+  "contact",
+  "faq",
+];
+
+const tpl = `<!doctype html>
 <html lang="en">
   <%- include('partials/head') %>
   <body class="min-h-screen flex flex-col bg-base-100">
@@ -35,4 +53,12 @@
     <%- include('partials/footer') %>
     <script src="/js/main.js"></script>
   </body>
-</html>
+</html>`;
+
+const viewsDir = path.join(process.cwd(), "views");
+for (const p of pages) {
+  const file = path.join(viewsDir, `${p}.ejs`);
+  fs.writeFileSync(file, tpl, "utf8");
+  console.log("Rewrote", `views/${p}.ejs`);
+}
+console.log("Done.");

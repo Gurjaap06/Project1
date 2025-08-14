@@ -1,0 +1,15 @@
+<div class="navbar bg-base-100 shadow">
+  <div class="flex-1 px-2 text-xl font-bold">Cricket Club</div>
+  <ul class="menu menu-horizontal">
+    <% (nav || []).forEach(n => { %>
+    <li>
+      <a
+        href="<%= n.href %>"
+        class="<%= page === n.label.toLowerCase() ? 'active' : '' %>"
+      >
+        <%= n.label %>
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+</div>

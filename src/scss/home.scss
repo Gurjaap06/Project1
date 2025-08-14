@@ -8,13 +8,17 @@ $gap: 1rem;
 
 %soft {
   border-radius: 1rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .home-hero {
   @extend %soft;
   @include inset-card($gap * 2);
 
-  h1 { letter-spacing: .2px; }
-  .cta { margin-top: $gap; }
+  h1 {
+    letter-spacing: 0.2px;
+  }
+  .cta {
+    margin-top: $gap;
+  }
 }
